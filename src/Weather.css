@@ -25,7 +25,7 @@ h1 {
 
 p {
   position: relative;
-  bottom: 20px;
+  bottom: 50px;
 }
 
 h5 {
@@ -76,6 +76,11 @@ li {
   top: 7px;
 }
 
+.CurrentIcon {
+  position: relative;
+  left: 250px;
+}
+
 #search-form {
   position: relative;
   top: 40px;
@@ -92,13 +97,6 @@ li {
   bottom: 20px;
   font-size: 17px;
   left: 5px;
-}
-
-#current-situation {
-  position: relative;
-  left: 250px;
-  bottom: 20px;
-  width: 150px;
 }
 
 #today-situation {
