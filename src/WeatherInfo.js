@@ -1,47 +1,40 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 import "./Weather.css";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <div className="card" id="current-weather-card">
+      <div className="card currentWeatherCard">
         <div className="card-body">
           <h1>
             <div>
               <span className="locationSign">
                 <i className="fa-solid fa-location-dot"></i>
               </span>
-              <span id="city"> {props.data.city} </span>
+              <span className="city"> {props.data.city} </span>
             </div>
-            <p className="currentWeather">
-              <span className="CurrentTemperature">
-                {props.data.temperature}
-              </span>
-              <span id="unit">°C</span>
-              <span id="unit-selection">
-                <a href="/" id="celsius-link">
-                  °C
-                </a>{" "}
-                |
-                <a href="/" id="fahrenheit-link">
-                  °F
-                </a>
-              </span>
-              <span className="CurrentIcon">
-                <WeatherIcon code={props.data.icon} />
-              </span>
-            </p>
+            <div className="currentWeather row">
+              <div className="col-6">
+                <WeatherTemperature celsius={props.data.temperature} />
+              </div>
+              <div className="col-6">
+                <span className="currentIcon">
+                  <WeatherIcon code={props.data.icon} />
+                </span>
+              </div>
+            </div>
           </h1>
           <h5>
-            <div id="current-time">
+            <div className="currentTime">
               <FormattedDate date={props.data.date} />
             </div>
-            <div id="today-situation">
-              <span id="max-temp">{props.data.maxTemp}</span>° /{" "}
-              <span id="min-temp">{props.data.minTemp}</span>°
-              <span id="today-description" className="text-capitalize">
+            <div className="todaySituation">
+              <span className="maxTemp">{props.data.maxTemp}</span>° /{" "}
+              <span className="minTemp">{props.data.minTemp}</span>°
+              <span className="todayDesc text-capitalize">
                 {" "}
                 {props.data.desc}{" "}
               </span>
@@ -49,29 +42,23 @@ export default function WeatherInfo(props) {
           </h5>
         </div>
       </div>
-      <div className="card" id="weather-properties-card">
+      <div className="card weatherPropertiesCard">
         <div className="card-body">
           <div className="row">
             <div className="col-3 humidity">
-              <i
-                className="fa-sharp fa-solid fa-droplet"
-                id="humidity-icon"
-              ></i>
+              <i className="fa-sharp fa-solid fa-droplet humidityIcon"></i>
               Humidity
               <br />
-              <span id="humidity"> {props.data.humidity} </span>%
+              <span> {props.data.humidity} </span>%
             </div>
             <div className="col-3">
-              <i className="fa-solid fa-wind" id="wind-icon"></i>
+              <i className="fa-solid fa-wind windIcon"></i>
               Wind
               <br />
-              <span id="wind"> {props.data.wind} </span> km/h
+              <span> {props.data.wind} </span> km/h
             </div>
             <div className="col-4">
-              <i
-                className="fa-sharp fa-solid fa-cloud-rain"
-                id="precipitation-icon"
-              ></i>
+              <i className="fa-sharp fa-solid fa-cloud-rain precipitationIcon"></i>
               Precipitation
               <br />
               14%
