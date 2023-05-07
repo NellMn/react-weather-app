@@ -96,8 +96,6 @@ li {
 .weatherPropertiesCard .row {
   font-size: 20px;
   font-weight: 500;
-  position: relative;
-  left: 100px;
 }
 
 .humidity {
@@ -134,8 +132,4 @@ li {
 .precipitationIcon {
   color: #0ca6c0;
   font-size: 20px;
-}
-
-#high-low-temp {
-  font-size: 18px;
 }

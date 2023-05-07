@@ -1,0 +1,24 @@
+.WeatherForecast {
+  text-align: center;
+  font-size: 20px;
+}
+
+.EachDay {
+  padding: 5px 0;
+  margin: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.38);
+  border-radius: 10px;
+}
+
+.ForecastDay {
+  margin-bottom: 5px;
+}
+
+.ForecastMinTemp {
+  opacity: 0.7;
+  margin-left: 5px;
+}
+
+#high-low-temp {
+  font-size: 18px;
+}
